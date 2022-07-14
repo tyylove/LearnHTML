@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的相对位置</title>
+    <style>
+        body{
+            font-size: 60px;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: relative;
+            left: 200px;
+            top: -200px;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        /* 
+        定位:(position)
+            定位是一种更高级的布局手段
+            通过定位可以将元素放到页面的任意位置
+            使用position属性来设置定位
+                可选值：
+                    static：默认值，元素时静止的，没有开启定位
+                    relative:开启元素的相对定位
+                    absolute:开启元素的绝对定位
+                    fixed:开启元素的固定定位
+                    sticky：开启元素的粘滞定位
+                相对定位的特点：
+                    1、不设置偏移量元素不会发生任何改变
+                            偏移量：top bottom right left
+                   2、 相对定位是参照与元素在文档流中的位置进行定位的
+                   3、 相对定位会提升元素的层级
+                   4、 相对定位不会使元素脱离文档流
+                   5、相对不会改变元素的性质
+
+                绝对定位的特点:
+                    1、不设置偏移量元素的位置不会发生改变
+                    2、元素会从文档流中脱离
+                    3、会改变元素的性质：行内变成块，块的宽度被内容撑开
+                    4、提升元素的层级
+                    5、绝对定位是相对于其包含块进行定位的
+                        包含块：
+                            正常情况下，包含块就是离当前元素最近的祖先元素
+                        绝对定位的包含快：
+                            包含块就是离他最近的开启了定位的祖先元素
+                            如果所有的祖先元素都未开启定位则根元素就是它的包含块
+                            根元素也叫初始包含块
+                    
+                固定定位的特点：
+                    1、固定定位是一种绝对定位，所以固定定位的大部分特点和绝对定位一样
+                    2、唯一不同的是固定定位永远参照于浏览器的视口进行定位
+
+                粘滞定位的特点：
+                    1、粘滞定位的特点与相对定位的特点基本一致
+                    2、不同的是粘滞定位可以在元素到达某个位置时将其固定
+                    3、兼容性差
+
+        */
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

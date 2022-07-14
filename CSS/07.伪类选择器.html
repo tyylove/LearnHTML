@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+        /* 
+        伪类：不存在的类(特殊的类)
+            伪类用来描述一个元素的特殊状态
+            比如：第一个子元素、被点击的元素、鼠标键入的元素....
+            伪类的使用 :开头
+            例子：:first-child 第一个子元素
+                 :last-child  最后一个子元素
+                 :nth-child() 选中第n个子元素
+                    n的特殊值
+                        n:表示0到无穷大
+                        2n:表示选中偶数位的元素
+                        2n+1 或 odd:表示选中奇数位的元素
+            以上的伪类排序都是根据所有的子元素排序的
+                :first-of-type
+                :last-of-type
+                :nth-last-of-type()
+            功能：和上面三个类似，不同点是这三个排序是在同类型元素下排序
+                :not() 否定伪类
+            将符合条件的伪类从选择器中去除
+            
+         */
+         ul > li:first-child{
+             color: maroon;
+         }
+         ul > li:last-child{
+             color: red;
+         }
+         ul > li:nth-child(3){
+             color: seagreen;
+         }
+         ul > li:not(:nth-of-type(3)){
+             color: yellowgreen;
+         }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第〇个</li>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冰墩墩</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .out{
+            width: 210px;
+            height: 230px;
+            margin: 50% auto;
+            position: relative;
+        }
+
+        .main-box{
+            width: 210px;
+            height: 230px;
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 50% 50% 44% 44%/50%;
+        }
+
+        .ear{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #000;
+            position: absolute;
+            left: 19px;
+            top: 0;
+            z-index: -1;
+        }
+
+        .ear.right{
+            left: unset;
+            right: 19px;
+            top: 0;
+        }
+
+        .hand{
+            width: 100px;
+            height: 43px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 44%;
+            left: -20%;
+            z-index: -1;
+            transform: rotate(306deg);
+        }
+
+        .hand-right{
+            width: 100px;
+            height: 46px;
+            background: #000;
+            position: absolute;
+            border-radius: 50%;
+            top: 29%;
+            right: -20%;
+            transform: rotate(300deg);
+            z-index: -1;
+        }
+
+        .foot{
+            width: 50px;
+            height: 80px;
+            background-color: #000;
+            position: absolute;
+            bottom: -8%;
+            left: 21%;
+            border-radius: 17px;
+            z-index: -1;
+        }
+
+        .foot.right{
+            left: unset;
+            right: 21%;
+            bottom: -7%;
+        }
+
+        .face{
+
+            width: 73%;
+            height: 120px;
+            border: 3px solid #000;
+            border-radius: 50%;
+            position: relative;
+            margin: 24px auto;
+            box-shadow: 0 0 0 2px #b7f2ff,0 0 0 4px #f52dd6, 0 0 0 7px #f4df74, 0 0 0 8px #000;
+        }
+
+        .eye{
+            width: 43px;
+            height: 57px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 18%;
+            left: 10%;
+            transform: rotate(44deg);
+        }
+
+        .eye.right{
+            left: unset;
+            right: 10%;
+            transform: rotate(-44deg);
+        }
+
+        .eye-in{
+            width: 30px;
+            height: 30px;
+            background: #000;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin: 6px;
+            position: relative;
+        }
+
+        .eye.right.eye-in{
+            transform: rotate(73deg);
+        }
+
+        .eye-in::before,.eye-in::after{
+            content: '';
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .eye-in::before{
+            width: 10px;
+            height: 10px;
+            top: 2px;
+            left: 10px;
+        }
+
+        .eye-in::after{
+            width: 5px;
+            height: 5px;
+            top: 15px;
+            left: 15px;
+        }
+
+        .nose{
+            width: 18px;
+            height: 16px;
+            background: #000;
+            border-radius: 6px 6px 50%/6px 6px 50% 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 44%;
+        }
+
+        .mouth{
+            width: 30px;
+            height: 20px;
+            background: #000;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 17%;
+            border-radius: 0 0 15px 15px 0 0 15px 15px;
+        }
+
+        .mouth-in{
+            width: 30px;
+            height: 20px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 0 0 15px 15px 0 0 15px 15p;
+        }
+
+        .mouth::before{
+            content: '';
+            width: 5px;
+            height: 1px;
+            left: -3px;
+            top: -1px;
+            position: absolute;
+            background: #000;
+            transform: rotate(325deg);
+        }
+
+        .mouth::after{
+            content: '';
+            width: 10px;
+            height: 1px;
+            right: -3px;
+            top: -1px;
+            position: absolute;
+            background: #000;
+            transform: rotate(37deg);
+        }
+
+        .tongue{
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            position: absolute;
+            top: 22%;
+            left: -5%;
+            background: #df2821;
+        }
+
+        .blush{
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 21%;
+            bottom: 30%;
+            border-radius: 50%;
+            box-shadow: 0 0 12px 12px rgba(222, 40, 34, 0.3);
+        }
+
+        .blush.right{
+            left: unset;
+            right: 21%;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <!-- 耳朵 -->
+        <div class="ear"></div>
+        <div class="ear right"></div>
+        <!-- 手 -->
+        <div class="hand"></div>
+        <div class="hand-right"></div>
+        <!-- 脚 -->
+        <div class="foot"></div>
+        <div class="foot right"></div>
+        <div class="main-box">
+            <!--脸 -->
+            <div class="face">
+                <!-- 眼睛 -->
+                <div class="eye">
+                    <div class="eye-in"></div>
+                </div>
+                <div class="eye right">
+                    <div class="eye-in"></div>
+                </div>
+                <!-- 鼻子 -->
+                <div class="nose"></div>
+                <!-- 嘴 -->
+                <div class="mouth">
+                    <div class="mouth-in">
+                        <div class="tongue"></div>
+                    </div>
+                </div>
+                <div class="blush"></div>
+                <div class="blush right"></div>
+            </div>
+            <!-- 脸结束标签 -->
+        </div>
+        <!-- 主体结束标签 -->
+    </div>
+    <!-- 外形结束标签 -->
+</body>
+</html>

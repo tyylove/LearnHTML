@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内边距</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 10px orange solid;
+
+            /*
+                内边距(padding)
+                内容区和边框之间的距离
+                一个盒子右四个方向的内边距
+                padding-top
+                padding-right
+                padding-bottom
+                padding-left
+                
+                内边距的大小会影响盒子的大小
+                背景颜色会延伸到内边距上
+
+                padding 简写属性和 border 相同
+             */
+
+                padding-top:100px;
+                padding-right:100px;
+                padding-bottom:100px;
+                padding-left:100px;
+
+                /* 
+                    内边距(margin)
+                        外边距不会影响盒子可见框的大小
+                        会影响盒子的位置
+                        一个有四个方向的外边距
+                            margin-top
+                                上外边距 设置一个正值，盒子向下移动
+                            margin-left
+                                左外边距 设置一个正值，盒子向右移动
+                            margin-bottom
+                                下外边距 设置一个正值，盒子向上移动
+                            margin-right
+                                右外边距 设置一个正值，盒子向左移动  
+                            元素在页面中是按照自左向右顺序排列的
+                            默认情况下，设置左和上外边距会移动元素自身
+                            设置右和下外边距会移动其他元素
+
+                            margin 简写属性和 border 相同
+                */
+                margin-top: 100px;
+                margin-left: 100px;
+                margin-bottom: 100px;
+                margin-right: 100px;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 10px orange solid;
+
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-bottom: 100px;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>

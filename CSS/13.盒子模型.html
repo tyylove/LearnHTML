@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        /*
+        内容区(comtent),元素中所有的子元素和文本内容都在内容区中排列
+            内容区的大小由 width 和 height 两个属性来设置
+            weight设置内容区的宽度
+            height设置内容区的高度 
+         */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 255, 76);
+
+            /* 
+            边框(border),盒子的边缘，边框里面属于盒子内部，外面属于外部
+            边框的大小会影响盒子的大小
+            要设置边框，至少要设置三个样式
+
+            边框的宽度 border-width  默认值一般是3个像素 
+            赋值有4个则依次为上、右、下、左的边框
+            3个值则为上、左右、下
+            2个值则为上下、左右
+            1个值为上下左右
+            还有border-xx-width
+            xx为 top(上) bottom(下) right(右) left(左)
+            默认值为3px
+            */
+            border-width: 10px;
+
+            /* 
+                边框的颜色 border-color
+                指定边框的颜色,同样可以分别指定四个边的边框
+                语法和border-width相同
+                可以省略不写，不写则为color的值
+            */
+                border-color: red;
+
+             /* 
+                边框的样式 border-style 
+                solid表示实线
+                dotted 表示点状虚线
+                dashed 表示线状虚线
+                double 表示双实线
+
+                默认值为none,表示没有边框
+            */
+
+            border-style: solid;
+
+            /* 
+                border简写属性,通过该属性同时设置边框的所有相关样式,并且没有顺序要求
+            */
+            border: 10px red solid
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我是一个边框</div>
+</body>
+</html>
